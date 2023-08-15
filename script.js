@@ -4,10 +4,10 @@ const weatherData = [
   { day: 'Monday', temperature: '25°C', condition: 'Sunny' },
   { day: 'Tuesday', temperature: '22°C', condition: 'Rainy' },
   { day: 'Wednesday', temperature: '20°C', condition: 'Cloudy' },
-  { day: 'Thursday', temperature: '28°C', condition: 'Sunny' },
-  { day: 'Friday', temperature: '26°C', condition: 'Rainy' },
-  { day: 'Saturday', temperature: '23°C', condition: 'Cloudy' },
-  { day: 'Sunday', temperature: '24°C', condition: 'Sunny' },
+  { day: 'Thursday', temperature: '28°C', condition: 'Fog' },
+  { day: 'Friday', temperature: '26°C', condition: 'Rain and Snow' },
+  { day: 'Saturday', temperature: '23°C', condition: 'Partly Cloudy' },
+  { day: 'Sunday', temperature: '24°C', condition: 'Snow' },
 ];
 
 const weatherContainer = document.querySelector('.weather-container');
@@ -61,6 +61,18 @@ function getWeatherIcon(condition) {
       return '🌧️';
     case 'cloudy':
       return '☁️';
+    case 'partly cloudy':
+      return '🌤️';
+    case 'thunderstorm':
+      return '🌩️';
+    case 'snow':
+      return '❄️';
+    case 'fog':
+      return '🌫️';
+    case 'hurricane':
+      return '🌀';
+    case 'rain and snow':
+      return '🌨️';
     default:
       return '❓';
   }
