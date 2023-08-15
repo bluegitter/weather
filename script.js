@@ -37,6 +37,22 @@ weatherData.forEach((data) => {
   weatherContainer.appendChild(card);
 });
 
+
+function startCardAnimations(index) {
+  if (index >= weatherData.length) {
+    return;
+  }
+
+  const card = weatherContainer.children[index];
+  card.style.animation = 'flipAnimation 1s forwards';
+
+  setTimeout(() => {
+    startCardAnimations(index + 1);
+  }, 750);
+}
+
+startCardAnimations(0);
+
 function getWeatherIcon(condition) {
   switch (condition.toLowerCase()) {
     case 'sunny':
