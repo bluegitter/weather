@@ -21,21 +21,18 @@ weatherData.forEach((data) => {
     <p>${data.temperature}</p>
   `;
 
-  let isRotated = false;
+  let timeoutId;
 
-//   card.addEventListener('mouseenter', () => {
-//     if (!isRotated) {
-//       card.style.transform = 'rotateY(360deg)';
-//       isRotated = true;
-//     }
-//   });
+  card.addEventListener('mouseenter', () => {
+    timeoutId = setTimeout(() => {
+      card.style.animation = 'flipAnimation 1s forwards';
+    }, 500);
+  });
 
-//   card.addEventListener('mouseleave', () => {
-//     if (isRotated) {
-//       card.style.transform = '';
-//       isRotated = false;
-//     }
-//   });
+  card.addEventListener('mouseleave', () => {
+    clearTimeout(timeoutId);
+    card.style.animation = '';
+  });
 
   weatherContainer.appendChild(card);
 });

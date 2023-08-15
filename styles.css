@@ -13,13 +13,13 @@ body {
     justify-content: space-between;
     align-items: center;
     overflow-x: auto;
-    padding: 10px;
+    padding: 2px;
   }
   
   .weather-card {
-    width: 150px;
+    width: 110px;
     height: 150px;
-    margin: 10px;
+    margin: 2px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -43,8 +43,8 @@ body {
 
   .weather-card:hover {
     background: linear-gradient(135deg, #1E90FF, #87CEEB);
-    /* transform: rotateY(360deg); */
-    animation: flipAnimation 1s forwards; /* Apply the animation */
+    /* animation: flipAnimation 0.5s forwards;  */
+    animation:none;
   }
   
   .weather-icon {
